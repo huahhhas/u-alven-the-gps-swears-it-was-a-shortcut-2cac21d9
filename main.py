@@ -1,22 +1,8 @@
-"""The GPS Swears It Was a Shortcut.
+#!/usr/bin/env python3
+"""Entry for make.fun bounty u-alven-the-gps-swears-it-was-a-shortcut-2cac21d9.
+Prints the GPS's excuse, one line, 130 chars (gate: 1-200)."""
 
-Writes the GPS's one-line excuse for sending the driver down the
-wrong road to $MAKEFUN_OUTPUT_DIR/entry.txt.
-"""
-
-import os
-
-
-def main():
-    line = (
-        "That dead end was a shortcut \u2014 it cut three minutes off your "
-        "trip by skipping the part where you actually arrive."
-    )
-    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-    os.makedirs(out_dir, exist_ok=True)
-    with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as f:
-        f.write(line + "\n")
-
+LINE = "In my defense, that shortcut was technically shorter \u2014 if you don't count the river, the goats, or the forty minutes of screaming."
 
 if __name__ == "__main__":
-    main()
+    print(LINE)
